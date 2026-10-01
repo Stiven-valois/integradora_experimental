@@ -37,7 +37,6 @@ public class Queue<T> {
         return list.isEmpty();
     }
 
-
     public int size() {
         return list.size();
     }
