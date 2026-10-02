@@ -7,7 +7,6 @@ public class Queue<T> {
 
     private final LinkedList<T> list;
 
-
     public Queue() {
         this.list = new LinkedList<>();
     }
@@ -16,22 +15,19 @@ public class Queue<T> {
         list.addLast(item);
     }
 
-
     public T dequeue() {
         if (isEmpty()) {
-            throw new EmptyStructureException("No se puede realizar dequeue en una cola vacía.");
+            throw new EmptyStructureException("La cola está vacía.");
         }
         return list.removeFirst();
     }
 
-
     public T front() {
         if (isEmpty()) {
-            throw new EmptyStructureException("No se puede consultar front en una cola vacía.");
+            throw new EmptyStructureException("La cola está vacía.");
         }
         return list.getFirst();
     }
-
 
     public boolean isEmpty() {
         return list.isEmpty();
